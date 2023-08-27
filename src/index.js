@@ -2,7 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+
+// Fire Base
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyD3yFp9Me9IOJlwmkWZtwsZWHVM1d420IM",
+  authDomain: "ract-chat-room.firebaseapp.com",
+  databaseURL: "https://ract-chat-room-default-rtdb.firebaseio.com",
+  projectId: "ract-chat-room",
+  storageBucket: "ract-chat-room.appspot.com",
+  messagingSenderId: "331045416229",
+  appId: "1:331045416229:web:e69ab4846758035caf3ecc"
+};
+const app = initializeApp(firebaseConfig);
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -10,8 +25,3 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
