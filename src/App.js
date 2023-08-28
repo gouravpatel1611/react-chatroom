@@ -40,7 +40,6 @@ function App() {
       <h1 className="text-3xl font-bold">User : {name} </h1>
       <div id="msgbox" className="chatContainer overflow-scroll h-[80vh] border border-black m-2 p-3">
         { chats.map((c,i) =>{
-            if(i%2==0){
             return(
              <div key={i} className={`flex ${c.name == name ? 'flex-row-reverse' : ""}`}>
              <p className={`border-2 border-gray-700 mt-1 mb-1 p-2 ${c.name != name ? 'bg-yellow-200' :  'bg-green-500' }  rounded-md`}>
@@ -48,7 +47,7 @@ function App() {
                <span>{c.message} </span>
              </p>
            </div>
-        )}})}
+        )})}
        
       </div>
       <div className="input fixed  w-full bottom-0 flex flex-row p-2 bg-red-300 border rounded-r-2xl">
